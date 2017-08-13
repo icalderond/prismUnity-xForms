@@ -1,29 +1,16 @@
-﻿using Xamarin.Forms;
+﻿using Prism.Unity;
+using Xamarin.Forms;
 
 namespace prismXForms
 {
-    public partial class App : Application
+    public partial class App : PrismApplication
     {
-        public App()
+        public App(IPlatformInitializer initializer = null) : base(initializer)
         {
-            InitializeComponent();
-
-            MainPage = new prismXFormsPage();
         }
-
-        protected override void OnStart()
+        protected override void OnInitialized() => InitializeComponent();
+        protected override void RegisterTypes()
         {
-            // Handle when your app starts
-        }
-
-        protected override void OnSleep()
-        {
-            // Handle when your app sleeps
-        }
-
-        protected override void OnResume()
-        {
-            // Handle when your app resumes
         }
     }
 }
