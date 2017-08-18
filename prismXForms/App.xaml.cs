@@ -7,9 +7,9 @@ namespace prismXForms
 {
     public partial class App : PrismApplication
     {
-        public App(IPlatformInitializer initializer = null) : base(initializer)
-        {
-        }
+        //public App(IPlatformInitializer initializer = null) : base(initializer)
+        //{
+        //}
         protected override void OnInitialized()
         {
             InitializeComponent();
