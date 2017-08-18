@@ -8,7 +8,8 @@ namespace prismXForms.ViewModels
     {
         private INavigationService _navigationService;
 
-        public SecondPageViewModel(INavigationService navigationService) // has to be named correctly
+
+        public SecondPageViewModel(INavigationService navigationService)
         {
             _navigationService = navigationService;
         }
