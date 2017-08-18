@@ -5,7 +5,9 @@
     x:Class="prismXForms.Views.SecondPage">
          <StackLayout VerticalOptions="Center" 
             HorizontalOptions="Center">
-            <Label Text="SecondPage"/>
+            <Label Text="SecondPage" FontAttributes="Bold"
+        FontSize="50"/>
+        <Label Text="{Binding Title}"/>
             <Button Text="Navegar" />
         </StackLayout>
 </ContentPage>

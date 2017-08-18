@@ -8,6 +8,12 @@ namespace prismXForms.ViewModels
     {
         private INavigationService _navigationService;
 
+        private string _Title;
+        public string Title
+        {
+            get { return _Title; }
+            set { SetProperty(ref _Title, value); }
+        }
 
         public SecondPageViewModel(INavigationService navigationService)
         {
@@ -21,7 +27,10 @@ namespace prismXForms.ViewModels
 
         public void OnNavigatedTo(NavigationParameters parameters)
         {
-
+            if (parameters.ContainsKey("Title"))
+            {
+                Title = parameters.GetValue<string>("Title");
+            }
         }
 
         public void OnNavigatingTo(NavigationParameters parameters)
